@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crédito</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #008080;
+  padding: 20px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+nav {
+  float: left;
+  width: 35%;
+  height: 800px; 
+  background: #87CEEB;
+  padding: 20px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width:60%;
+  background-color: #FFFFFF;
+  height: 200px; 
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #FF7F50;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<script>
+    function confirmacion (){
+    var respuesta = confirm ("Transacción exitosa");
+    }
+    </script>
+    
+
+<body>
+<header>
+  <h1>Detalles de Pago</h1>
+</header>
+<section>
+  <nav>
+    <ul>
+       <img src="tdebito.png" alt="">
+    </ul>
+  </nav>
+  <article>
+    <h1>Pago de Créditos</h1>
+    <div class="text-center">
+                    <img src="{{ asset('assets/innova_logo.jpg')}}"
+                    style="width: 80px;" alt=logo">
+                    <h4 class="mt-1 mb-5 pb-1">Innova</h4>
+                  </div>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">      
+<div class="card-header">          
+<h3 class="text-center">Pago de Créditos</h3>         
+</div>        
+<div class="card-body">
+            <form>            
+<div class="form-group">             
+<label for="cardNumber">Número de Tarjeta </label>             
+<input type="text" class="form-control" id="cardNumber" placeholder="XXXX XXXX XXXX XXXX">           
+</div>
+<div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="fecha">Fecha</label>
+        <input type="date" class="form-control" id="fecha">
+      </div>
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" class="form-control" id="threeDigits" placeholder="XXX"  maxlength="3">
+              </div>
+              <div class="form-group">
+                    <label for="decimalInput"> Monto a Pagar</label>
+                    <input type="text" class="form-control" id="payment" placeholder="0.00">
+                  </div>
+
+       <form id="formularioPago" method="post" action="procesar_pago.php">
+           <button type = "submit" class = "btn btn-primary btn-block" onclick="mostrarAlerta()">Pagar</button>
+
+            <script>
+        function mostrarAlerta() {
+          alert("Transferencia exitosa");
+        }
+      </script>
+  </form>
+   </section>
+</article>
+<footer>
+  <h1>Innova</h1>
+</footer>
+</body>
+</style>
+</html>
